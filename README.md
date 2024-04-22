@@ -19,4 +19,5 @@ Tailwind css only adds the classes used in ts file to the ultimate css build, pr
 
 
 # TODO
-- Give exm
+- i18n, https://github.com/i18next/next-i18next
+- Global state managment, Zustand?
