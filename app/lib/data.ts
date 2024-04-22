@@ -14,7 +14,7 @@ import { getSession, setSession } from "@/auth";
 import { redirect } from 'next/navigation'
 
 // Need to use 127.0.0.1 vs localhost node 18
-const BASE_URL = "http://127.0.0.1:5000/"
+const BASE_URL = "http://127.0.0.1:5000"
 
 async function makeRequest(path: String): Promise<any>{
   let authToken = getSession()
