@@ -10,17 +10,42 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
+import { getSession, setSession } from "@/auth";
+import { redirect } from 'next/navigation'
 
+// Need to use 127.0.0.1 vs localhost node 18
+const BASE_URL = "http://127.0.0.1:5000/"
+
+async function makeRequest(path: String): Promise<any>{
+  let authToken = getSession()
+  let url: string = `${BASE_URL}/${path}`
+  const response = await fetch(url, {
+    method: 'GET',
+    // TODO: Set ChildType and ChildID headers
+
+    headers: {"Authorization": `Bearer ${authToken}`, "ChildType": 'attorney', "ChildId": '86244'}
+  });
+  // TODO: Handle errors better
+  if (response.status == 401){
+        console.log("Bad Error: Should redirect to Login")
+        // return redirect("/login")
+      }
+  else{
+    const data = await response.json();
+    return data
+  }
+
+}
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
 
   try {
     noStore();
-    // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    console.log('Fetching revenue data...');
+
+    let response = await makeRequest('attorneys')
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
