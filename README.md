@@ -12,4 +12,11 @@ Fonts are added to static package via the fonts.ts file.
 Tailwind css only adds the classes used in ts file to the ultimate css build, preventing un-used css from being included in package.
 
 # Node
-- Must use node v 18.19.1
+- Must use node v 18+
+
+# How to deploy to Vercel?
+- TODO
+
+
+# TODO
+- Give exm

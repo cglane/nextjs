@@ -14,11 +14,11 @@ import { getSession, setSession } from "@/auth";
 import { redirect } from 'next/navigation'
 
 // Need to use 127.0.0.1 vs localhost node 18
-const BASE_URL = "http://127.0.0.1:5000"
 
 async function makeRequest(path: String): Promise<any>{
+  // Base Method for making requests to Server
   let authToken = getSession()
-  let url: string = `${BASE_URL}/${path}`
+  let url: string = `${process.env.API_BASE_URL}/${path}`
   const response = await fetch(url, {
     method: 'GET',
     // TODO: Set ChildType and ChildID headers
@@ -45,7 +45,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
 
-    let response = await makeRequest('attorneys')
+    // let response = await makeRequest('attorneys')
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
