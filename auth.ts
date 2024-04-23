@@ -25,9 +25,7 @@ export  function getSession() : Session {
         "id": "123",
         "name": "Atticus Finch Law"
       }
-    }
-
-    
+    }    
   }
     // const session = cookies().get('auth_session')?.value || ""
     // return session
