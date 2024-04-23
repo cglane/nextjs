@@ -1,5 +1,8 @@
 @import './variables.scss';
 
-.base-color{
-    background-color: $caseStatusBlue
+.bg-blue-light{
+    background-color: $blue-light
   }
+.bg-blue-dark{
+  background-color: $blue-dark
+}
