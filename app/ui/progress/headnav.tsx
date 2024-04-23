@@ -9,12 +9,11 @@ export default function HeadNav(props: any) {
     const {language, setLanguage} = useContext(Context)
 
   return (
-    <nav className="bg-blue-dark">
+    <nav className="bg-blue-dark w-full">
       <div className="mx-auto max-w-1xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              {language}
               <Image
                 src="https://staging-cdn.casestatus.com/img/cs-logo-mark-white-67379bc59ef8d31051ce0ebd1da4ddc3.svg"
                 width={120}
@@ -41,8 +40,13 @@ export default function HeadNav(props: any) {
           </div>
         </div>
       </div>
+      <div className='max-w-96 overflow-hidden'>
+          <hr></hr>
+      </div>
+      <div  className='md:overflow-hidden bg-blue-dark h-60'></div>
 
     </nav>
+
 
   );
 }
