@@ -4,9 +4,10 @@ import type { NextRequest } from 'next/server'
 
 import { getSession } from "@/auth";
 
+
 export async function middleware(request: NextRequest) {
 
-    const session = await getSession();
+    const session = getSession();
     
     // if(!session) {
     //     return NextResponse.redirect(new URL('/login', request.url))
