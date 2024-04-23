@@ -1,14 +1,19 @@
 /** @type {import('next').NextConfig} */
+const path = require('path')
+
 const nextConfig = {
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+      },
     images: {
         // This is all for Tailwind Images
         dangerouslyAllowSVG: true,
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: 'tailwindui.com',
+            hostname: 'staging-cdn.casestatus.com',
             port: '',
-            pathname: '/img/logos/**',
+            pathname: '/img/**',
           },
         ],
       },

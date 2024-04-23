@@ -2,19 +2,18 @@ import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
-// import { signOut } from '@/auth';
 import Image from 'next/image';
 
 export default function HeadNav() {
   return (
-<nav className="bg-gray-800">
+<nav className="bg-gray-800 base-color">
   <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div className="relative flex h-16 items-center justify-between">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
         {/* <!-- Mobile menu button--> */}
         <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
           <span className="absolute -inset-0.5"></span>
-          <span className="sr-only">Open main menu</span>
+          {/* <span className="sr-only">Open main menu</span> */}
           {/* <!--
             Icon when menu is closed.
 
@@ -35,14 +34,16 @@ export default function HeadNav() {
       </div>
       <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex flex-shrink-0 items-center">
-          <Image  width={100}height={100} className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/>
+        <Image
+        src="https://staging-cdn.casestatus.com/img/cs-logo-dark-03ae79696f1a088c15d686ac4b492506.svg"
+        width={120}
+        height={100}
+        className="h-8 w-auto"
+        alt="Case Status Icon"
+  />
+          {/* <Image  width={100}height={100} className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/> */}
         </div>
-        <div className="hidden sm:ml-6 sm:block">
-          <div className="flex space-x-4">
-            {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-            <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Case Status</a>            
-          </div>
-        </div>
+
         <div className="hidden sm:ml-64 sm:block">
           <div className="flex space-x-4">
             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
