@@ -10,18 +10,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className=" md:overflow-hidden">
           
           <HeadNav session={session}/>
-
-          <div className='flex top-8 absolute w-full md:overflow-y-auto px-24 py-12'>
-            <div className="md:flex-auto md:w-32 sm:w-full">
-              <div className='flex-auto text-white w-full'>
+          <div className='md:flex top-8 absolute w-full md:overflow-y-auto px-8 md:px-24 py-12'>
+            {/* Welcome to Case Status Block */}
+            <div className="md:flex-auto md:w-32 w-full">
+              <div className='md:flex-auto text-white w-full'>
                 <h2 className="font-bold text-xl p-1">Welcome to Case Status!</h2>                
                 <p className='text-xs leading-4 p-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
               </div>
               <br></br>
-              <div className='flex-auto w-full'>
-                  <div className="flex rounded-xl bg-white shadow-sm p-12">
-                    <div className="flex-auto w-3">                     
-                       <QuestionMarkCircleIcon className="h-6 w-6 color-blue-dark bg-gray-50" />
+              {/* Help Block */}
+              <div className='md:flex w-full'>
+                  <div className="flex rounded-xl bg-white shadow-sm p-4">
+                    <div className="w-16 m-1">                     
+                       <QuestionMarkCircleIcon className="h-6 w-6 color-blue-dark bg-gray-200 rounded " />
                     </div>
                     
                     <div className="flex flex-col w-64">
@@ -43,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             {/* <div  className='md:overflow-hidden bg-blue-dark h-60'></div> */}
-            <div className="flex-auto w-64">{children}</div>
+            <div className="md:flex-auto w-64">{children}</div>
           </div>
 
       </div>

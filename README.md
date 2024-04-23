@@ -26,3 +26,4 @@ Tailwind css only adds the classes used in ts file to the ultimate css build, pr
 # Guiding Points
 - use Tailwind as much as you can, custom classes should be used only if tailwind classes have been exhausted
 -All components should be tested on 3 screen widths
+- Always use 'md' when thinking about desktop screens
