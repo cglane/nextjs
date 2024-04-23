@@ -14,8 +14,7 @@ export default function HeadNav() {
                 height={100}
                 className="h-8 w-auto"
                 alt="Case Status Icon"
-              />
-              {/* https://tailwindcss.com/docs/font-size */}
+              />              
               <span className="text-white rounded-md px-3 py-2 text-lg font-bold">case status</span>
             </div>
           </div>   
