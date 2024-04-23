@@ -11,12 +11,16 @@ import {
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions';
+import { useState } from 'react';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState = { message: null, errors: {} };
+  const [showNext, setshowNext] = useState(false);
 
   const [state, formAction] = useFormState(createInvoice, initialState);
-
+  function showNextButton(e: any) {
+    setshowNext(!showNext)
+  }
   return (
     <form action={formAction}>
 
@@ -46,6 +50,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
             </select>
             <UserCircleIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500" />
             <div id="customer-error" aria-live="polite" aria-atomic="true">
+              <button onClick={ showNextButton}>Click</button>
 
       </div>
           </div>
@@ -56,7 +61,11 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                 </p>
             ))}
         </div>
+          {
+            showNext  &&
+            <h1>Hello</h1>
 
+          }
         {/* Invoice Amount */}
         <div className="mb-4">
           <label htmlFor="amount" className="mb-2 block text-sm font-medium">
