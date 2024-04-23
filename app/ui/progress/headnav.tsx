@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import Progress from '@/app/ui/progress/progress'
+import Progress from '@/app/ui/progress/progress-bar'
 import { getSession } from "@/auth";
 
 export default function HeadNav() {
