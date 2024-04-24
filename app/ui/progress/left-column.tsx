@@ -4,13 +4,16 @@ import Progress from '@/app/ui/progress/progress-bar'
  import {useContext} from "react"
  import { Context } from "@/context/theme";
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
+import useTranslation from 'next-translate/useTranslation'
 
 export default function LeftColumn(props:any) {
+  const { t, lang } = useTranslation('progress')
+
     return (
     <div>
       <div className='md:flex-auto text-white w-full'>
-        <h2 className="font-bold text-xl p-1">Welcome to Case Status!</h2>                
-        <p className='text-xs leading-4 p-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        <h2 className="font-bold text-xl p-1">{t('welcome_title')}</h2>                
+        <p className='text-xs leading-4 p-1'>{t('welcome_body')}</p>
       </div>
       <br></br>
       {/* Help Block */}
@@ -21,8 +24,8 @@ export default function LeftColumn(props:any) {
             </div>
             
             <div className="flex flex-col w-64">
-              <h3 className="text-sm font-bold">Need help?</h3>
-              <p className='text-xs leading-5'>Our Customer Service team is here to help you with any question you have with your onboarding</p>
+              <h3 className="text-sm font-bold">{t('need_help_title')}</h3>
+              <p className='text-xs leading-5'>{t('need_help_body')}</p>
               <br/>
               <a className='text-xs color-blue-dark font-bold'>Contact us</a>
               <br/>
