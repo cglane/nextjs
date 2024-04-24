@@ -1,30 +1,25 @@
 import {
     CheckIcon
   } from '@heroicons/react/24/outline';
-//   import { fetchCardData  } from '@/app/lib/data';
-//   const iconMap = {
-//     collected: BanknotesIcon,
-//     customers: UserGroupIcon,
-//     pending: ClockIcon,
-//     invoices: InboxIcon,
-//   };
-import Link from 'next/link';
 
-import { Button } from '../button';
+import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation'
+
 export function ActionCard({
     title,
     progress,
-    description,
+    description,    
     link,
-    type,
+
   }: {
     title: string;
     progress: number | string;
     description: string;
     link: string;
-    type: 'invoices' | 'customers' | 'pending' | 'collected';
+
   }) {
-  
+    const { t, lang } = useTranslation('progress')
+
     return (
       <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
         <div className="md:flex md:p-4">
@@ -32,12 +27,22 @@ export function ActionCard({
           <div className='md:w-9/12 w-full md:px-2 text-center md:text-left'>
             <h3 className="text-extrabold font-semibold w-full">{title}</h3>            
             <p className="mb-4 text-xs text-gray-600 w-full md:py-1">{description}</p>
-            <Link
-            href="/login"
-            className="items-center self-start rounded-lg px-2 py-2 text-xs md:text-sm outline outline-1 outline-offset-0 outline-gray-300"
-          >
-            <span>View and edit</span> 
-          </Link>
+            {
+                    progress == 1?             
+                    <Link
+                        href="/login"
+                        className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font:medium outline outline-1 outline-offset-0 outline-gray-300"
+                    >
+                        <span>{t('progress_complete')}</span> 
+                    </Link>:             
+                    <Link
+                        href="/login"
+                        className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font-medium bg-indigo-950 text-white"
+                    >
+                        <span>{t('button_get_started')}</span> 
+                    </Link>
+                }
+
           </div>
           <div className='my-6 md:my-0 md:w-2/12 w-full justify-center'>
             <div>
@@ -45,7 +50,7 @@ export function ActionCard({
             </div>
             <div className="w-full text-center">
                 {
-                    progress == 1? <span className='text-xs'>Complete!</span>: ''
+                    progress == 1? <span className='text-xs'>{t('progress_complete')}</span>: <span className='text-xs'>{t('progress_steps', {steps: 2})}</span>
                 }
             </div>
             
