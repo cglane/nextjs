@@ -24,12 +24,11 @@ export function ActionCard({
     link: string;
     type: 'invoices' | 'customers' | 'pending' | 'collected';
   }) {
-    // const Icon = iconMap[type];
   
     return (
       <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
-        <div className="flex p-4">
-          <CheckIcon className="h-8 w-8 text-green-700 bg-green-100" />
+        <div className="md:flex p-4">
+          <CheckIcon className="w-8 h-8 text-green-400 bg-green-50 hidden md:block " />
           <div className='md:w-9/12 w-full md:px-4'>
             <h3 className="text-extrabold font-semibold w-full md:py-2">{title}</h3>            
             <p className="my-2 text-xs text-gray-600 w-full md:py-2">{description}</p>
@@ -40,7 +39,7 @@ export function ActionCard({
             <span>View and edit</span> 
           </Link>
           </div>
-          <div className='md:w-2/12 w-full justify-center'>
+          <div className='my-6 md:my-0 md:w-2/12 w-full justify-center'>
             <div>
                 <progress className="w-full " value={progress}/>
             </div>
