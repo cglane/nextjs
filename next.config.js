@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path')
+const nextTranslate = require('next-translate-plugin')
 
 const nextConfig = {
     sassOptions: {
@@ -19,4 +20,4 @@ const nextConfig = {
       },
 };
 
-module.exports = nextConfig;
+module.exports = nextTranslate(nextConfig);
