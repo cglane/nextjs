@@ -8,6 +8,9 @@ import {
 //     pending: ClockIcon,
 //     invoices: InboxIcon,
 //   };
+import Link from 'next/link';
+
+import { Button } from '../button';
 export function ActionCard({
     title,
     progress,
@@ -27,22 +30,27 @@ export function ActionCard({
       <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
         <div className="flex p-4">
           <CheckIcon className="h-8 w-8 text-green-700 bg-green-100" />
-          <div className='md:w-9/12 w-full md:px-3'>
-            <h3 className="ml-2 text-extrabold font-semibold w-full">{title}</h3>
-            <br  ></br>
-            <p className="ml-2 text-xs text-gray-600 w-full">{description}</p>
+          <div className='md:w-9/12 w-full md:px-4'>
+            <h3 className="text-extrabold font-semibold w-full md:py-2">{title}</h3>            
+            <p className="my-2 text-xs text-gray-600 w-full md:py-2">{description}</p>
+            <Link
+            href="/login"
+            className="items-center self-start rounded-lg px-2 py-2 text-xs md:text-sm outline outline-1 outline-offset-0 outline-gray-300"
+          >
+            <span>View and edit</span> 
+          </Link>
           </div>
           <div className='md:w-2/12 w-full justify-center'>
             <div>
-                <progress className="w-full bg-" value={progress}/>
+                <progress className="w-full " value={progress}/>
             </div>
             <div className="w-full text-center">
                 {
                     progress == 1? <span className='text-xs'>Complete!</span>: ''
                 }
             </div>
-    
-            </div>
+            
+        </div>
           
         </div>
         {/* <p
