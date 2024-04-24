@@ -44,7 +44,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             {/* <div  className='md:overflow-hidden bg-blue-dark h-60'></div> */}
-            <div className="md:flex-auto w-64">{children}</div>
+            <div className="md:flex-auto w-64">{children}      <progress value={.4} />
+</div>
           </div>
 
       </div>
