@@ -1,8 +1,8 @@
 {
     "h_welcome_title": "Welcome to Case Status!",
-    "h_welcome_body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    "span_need_help_title": "Need help?",
-    "span_need_help_body": "Our Customer Service team is here to help you with any question you have with your onboarding",
+    "p_welcome_body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    "h_need_help_title": "Need help?",
+    "p_need_help_body": "Our Customer Service team is here to help you with any question you have with your onboarding",
     "span_view_edit": "View and edit",
     "span_get_started": "Get Started",
     "span_progress_steps": "{{steps}} steps remaining",

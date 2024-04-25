@@ -8,8 +8,8 @@ export default function LeftColumn(props:any) {
     return (
     <div>
       <div className='md:flex-none text-white w-full'>
-        <h2 className="font-bold text-xl p-1">{t('welcome_title')}</h2>                
-        <p className='text-xs leading-4 p-1'>{t('welcome_body')}</p>
+        <h2 className="font-bold text-xl p-1">{t('h_welcome_title')}</h2>                
+        <p className='text-xs leading-4 p-1'>{t('p_welcome_body')}</p>
       </div>
       <br></br>
       {/* Help Block */}
@@ -20,8 +20,8 @@ export default function LeftColumn(props:any) {
             </div>
             
             <div className="flex flex-col w-64">
-              <h3 className="text-sm font-bold">{t('need_help_title')}</h3>
-              <p className='text-xs leading-5'>{t('need_help_body')}</p>
+              <h3 className="text-sm font-bold">{t('h_need_help_title')}</h3>
+              <p className='text-xs leading-5'>{t('p_need_help_body')}</p>
               <br/>
               <a className='text-xs color-blue-dark font-bold'>Contact us</a>
               <br/>
