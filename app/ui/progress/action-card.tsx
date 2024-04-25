@@ -23,7 +23,7 @@ export function ActionCard({
     const { t, lang } = useTranslation('progress')
 
     return (
-      <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
+      <div className="rounded-xl bg-white p-2 shadow-sm">
         <div className="md:flex md:p-4">
           {
             progress == 1?
@@ -33,9 +33,9 @@ export function ActionCard({
           
           <div className='md:w-9/12 w-full md:px-5 text-center md:text-left'>
             <h3 className="text-extrabold font-semibold w-full">{title}</h3>            
-            <p className="mb-4 text-xs text-gray-600 w-full md:py-1">{description}</p>
+            <p className="mb-4 text-xs text-gray-500 w-full md:py-1">{description}</p>
             {
-                    progress == 1?             
+                    progress != 0?             
                     <Link
                         href="/login"
                         className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font:medium outline outline-1 outline-offset-0 outline-gray-300"

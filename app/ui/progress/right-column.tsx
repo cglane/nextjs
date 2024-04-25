@@ -24,15 +24,15 @@ export default function RightColumn(props:any) {
                 title={t('h_phone_title')}
                 description={t('p_phone_body')}
                 link="dashboard" 
-                index={2}
-                progress={.1} /> 
+                index={3}
+                progress={.2} /> 
                 <br/>
             <ActionCard 
                 title={t('h_firm_branding_title')}
                 description={t('p_firm_branding_body')}
                 link="dashboard" 
-                index={2}
-                progress={.1} />                                 
+                index={4}
+                progress={0} />                                 
         </div>
 
     )
