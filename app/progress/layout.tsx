@@ -8,8 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const session = getSession()
 
   return (
-      <div className="md:overflow-hidden">
-          
+      <div className="md:overflow-hidden">          
           <HeadNav session={session}/>
             {children} 
       </div>

@@ -7,16 +7,32 @@ export default function RightColumn(props:any) {
     return (
         <div> 
             <ActionCard 
-                title={t('firm_information')}
-                description={t('firm_information_description')}
+                title={t('h_firm_information_title')}
+                description={t('p_firm_information_body')}
                 link="dashboard" 
+                index={1}
                 progress={1} />
                 <br/>
             <ActionCard 
-                title={t('firm_information')}
-                description={t('firm_information_description')}
+                title={t('h_pa_title')}
+                description={t('p_pa_body')}
                 link="dashboard" 
+                index={2}
                 progress={.1} />
+                <br/>
+            <ActionCard 
+                title={t('h_phone_title')}
+                description={t('p_phone_body')}
+                link="dashboard" 
+                index={2}
+                progress={.1} /> 
+                <br/>
+            <ActionCard 
+                title={t('h_firm_branding_title')}
+                description={t('p_firm_branding_body')}
+                link="dashboard" 
+                index={2}
+                progress={.1} />                                 
         </div>
 
     )

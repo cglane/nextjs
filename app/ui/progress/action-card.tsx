@@ -1,5 +1,5 @@
 import {
-    CheckIcon
+    CheckIcon,    
   } from '@heroicons/react/24/outline';
 
 import Link from 'next/link';
@@ -10,12 +10,14 @@ export function ActionCard({
     progress,
     description,    
     link,
+    index
 
   }: {
     title: string;
     progress: number | string;
     description: string;
     link: string;
+    index:number
 
   }) {
     const { t, lang } = useTranslation('progress')
@@ -23,8 +25,13 @@ export function ActionCard({
     return (
       <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
         <div className="md:flex md:p-4">
-          <CheckIcon className="w-5 h-5 text-green-400 bg-green-50 hidden md:block " />
-          <div className='md:w-9/12 w-full md:px-2 text-center md:text-left'>
+          {
+            progress == 1?
+            <CheckIcon className="w-5 h-5 text-green-400 bg-green-50 hidden md:block " />:
+             <span className="w-9 h-9 hidden md:block rounded-md bg-gray-200 py-2 text-center align-middle">{index}</span>
+          }
+          
+          <div className='md:w-9/12 w-full md:px-5 text-center md:text-left'>
             <h3 className="text-extrabold font-semibold w-full">{title}</h3>            
             <p className="mb-4 text-xs text-gray-600 w-full md:py-1">{description}</p>
             {
@@ -33,13 +40,13 @@ export function ActionCard({
                         href="/login"
                         className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font:medium outline outline-1 outline-offset-0 outline-gray-300"
                     >
-                        <span>{t('progress_complete')}</span> 
+                        <span>{t('span_view_edit')}</span> 
                     </Link>:             
                     <Link
                         href="/login"
                         className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font-medium bg-indigo-950 text-white"
                     >
-                        <span>{t('button_get_started')}</span> 
+                        <span>{t('span_get_started')}</span> 
                     </Link>
                 }
 
@@ -50,7 +57,7 @@ export function ActionCard({
             </div>
             <div className="w-full text-center">
                 {
-                    progress == 1? <span className='text-xs'>{t('progress_complete')}</span>: <span className='text-xs'>{t('progress_steps', {steps: 2})}</span>
+                    progress == 1? <span className='text-xs'>{t('span_progress_complete')}</span>: <span className='text-xs'>{t('span_progress_steps', {steps: 2})}</span>
                 }
             </div>
             
