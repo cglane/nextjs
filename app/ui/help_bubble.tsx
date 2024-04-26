@@ -1,14 +1,13 @@
-// import useTranslation from 'next-translate/useTranslation'
 "use client"
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import useTranslation from 'next-translate/useTranslation'
 
-export default function RightColumn(props:any) {
+export default function HelpBubble(props:any) {
     const { t, lang } = useTranslation('progress')
 
     return (
         <div>
-        <div className='md:flex-auto w-full md:rounded:sm md:p-8'>
+        <div className='md:flex-auto w-full md:rounded:sm'>
             <div className="flex rounded-xl bg-white shadow-sm p-4">
               <div className="w-16 m-1">                     
                  <QuestionMarkCircleIcon className="h-6 w-6 color-blue-dark bg-gray-200 rounded " />
