@@ -40,10 +40,7 @@ export default function HeadNav(props: any) {
           </div>
         </div>
       </div>
-      <div className='max-w-96 overflow-hidden'>
-          <hr></hr>
-      </div>
-      <div  className='md:overflow-hidden bg-blue-dark h-60'></div>
+
 
     </nav>
 

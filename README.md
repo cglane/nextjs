@@ -4,6 +4,7 @@ Fonts are added to static package via the fonts.ts file.
 
 # CSS
 Tailwind css only adds the classes used in ts file to the ultimate css build, preventing un-used css from being included in package.
+Any custom css classes should be added in the styles folder.
 
 # Sizing and Screen Sizing
 Tailwind is mobile first so any formatting that is not mobile specific should use the 'md:XX' naming convention'

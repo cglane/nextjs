@@ -37,13 +37,13 @@ export function ActionCard({
             {
                     progress != 0?             
                     <Link
-                        href="/login"
+                        href={link}
                         className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font:medium outline outline-1 outline-offset-0 outline-gray-300"
                     >
                         <span>{t('span_view_edit')}</span> 
                     </Link>:             
                     <Link
-                        href="/login"
+                        href={link}
                         className="items-center self-start rounded-md px-2 py-2 text-xs text-xs font-medium bg-indigo-950 text-white"
                     >
                         <span>{t('span_get_started')}</span> 
