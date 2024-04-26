@@ -1,7 +1,7 @@
 
 "use client"
 import Image from 'next/image';
-import Progress from '@/app/ui/progress/progress-bar'
+import Progress from '@/app/ui/progress/progress_bar'
  import {useContext} from "react"
  import { Context } from "@/context/theme";
 

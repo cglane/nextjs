@@ -23,6 +23,10 @@ Authentication is handled through the middleware.ts file. This stands between al
 # How to deploy to Vercel?
 - TODO
 
+# Filenaming
+Use snake case. 'right_column.tsx'
+Why? Why not.
+
 # TODO
 - i18n, https://github.com/i18next/next-i18next
 - Global state managment, Zustand?

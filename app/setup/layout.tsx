@@ -1,8 +1,8 @@
 
 import HeadNav from '../ui/progress/headnav';
 import { getSession } from "@/auth";
-import RightColumn from '../ui/setup/right-column';
-import LeftColumn from '../ui/setup/left-column';
+import RightColumn from '../ui/setup/right_column';
+import LeftColumn from '../ui/setup/left_column';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const session = getSession()

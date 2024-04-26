@@ -1,5 +1,5 @@
-import LeftColumn from '@/app/ui/progress/left-column'
-import RightColumn from '@/app/ui/progress/right-column'
+import LeftColumn from '@/app/ui/progress/left_column'
+import RightColumn from '@/app/ui/progress/right_column'
 export default function Page() {
     return (
       <div>

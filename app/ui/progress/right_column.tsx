@@ -1,4 +1,4 @@
-import { ActionCard } from "./action-card"
+import { ActionCard } from "./action_card"
 import useTranslation from 'next-translate/useTranslation'
 
 export default function RightColumn(props:any) {
@@ -16,7 +16,7 @@ export default function RightColumn(props:any) {
             <ActionCard 
                 title={t('h_pa_title')}
                 description={t('p_pa_body')}
-                link="dashboard" 
+                link="setup/practice_area" 
                 index={2}
                 progress={.1} />
                 <br/>
