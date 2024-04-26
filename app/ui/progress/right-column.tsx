@@ -9,7 +9,7 @@ export default function RightColumn(props:any) {
             <ActionCard 
                 title={t('h_firm_information_title')}
                 description={t('p_firm_information_body')}
-                link="progress/firm_information" 
+                link="setup/firm" 
                 index={1}
                 progress={1} />
                 <br/>
