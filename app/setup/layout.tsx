@@ -11,15 +11,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="md:overflow-hidden">          
           <HeadNav session={session}/>
           <div>
-            <div className='flex w-full h-screen '>
-                <div className="md:flex-none hidden md:block md:w-64 rounded-xl bg-gray-200 p-2 shadow-sm">
+            <div className='md:flex w-full md:h-screen'>
+                <div className="md:flex-none md:block md:w-2/12 md:border-2 w-full">
                     <LeftColumn/>
                 </div>                
-                <div className="md:flex-auto hidden md:block md:w-64">
+                <div className="md:flex-auto md:block w-full">
                     {children} 
                 </div>
-                <div className="md:flex-none hidden md:block md:w-64">
-                <RightColumn/>
+                <div className="md:flex-none md:block md:w-3/12">
+                    <RightColumn/>
                 </div>
             </div>
           </div>
