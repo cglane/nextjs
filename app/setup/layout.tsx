@@ -15,6 +15,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <LeftColumn/>
                 </div>                
                 <div className="md:flex-auto md:block w-full">
+                    <div className='md:flex'> 
+                        <div className='w-6/12'>
+                            <h1>Practice Area Configuration</h1>
+                        </div>
+                        <div className='w-6/12 text-right'>
+                            <span>Hello</span>
+                        </div>
+                    </div>
                     {children} 
                 </div>
                 <div className="md:flex-none md:block md:w-2/12 md:p-4">
