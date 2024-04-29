@@ -6,15 +6,17 @@ import { useRouter } from 'next/navigation'
 export default  function Page() {      
   const router = useRouter()
 
-  const {replace} = useStageStore();
+  const {replace, stage} = useStageStore();
+  
   const handleClickListener = () => {
-    replace({"title": "import", "index": 2})
+    replace({"title": "Import List", "index": 2})
     router.push("/setup/practice_area/import_list")
   };
     return (
     <main>
+        <h1>Current Module:{stage.title}</h1>
           <button onClick={handleClickListener}>
-            Import
+            Click to Move on to the Next Module
       </button>  
     </main>
   );
