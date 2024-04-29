@@ -1,11 +1,9 @@
 "use client"
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import useTranslation from 'next-translate/useTranslation'
-import { useCartStore } from "@/stores/zustand";
 
 export default function HelpBubble(props:any) {
     const { t, lang } = useTranslation('progress')
-    // const { cart} = useCartStore();
 
     return (
         <div>
