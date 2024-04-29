@@ -1,9 +1,11 @@
 "use client"
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import useTranslation from 'next-translate/useTranslation'
+import { useCartStore } from "@/stores/zustand";
 
 export default function HelpBubble(props:any) {
     const { t, lang } = useTranslation('progress')
+    const { cart} = useCartStore();
 
     return (
         <div>
@@ -17,7 +19,7 @@ export default function HelpBubble(props:any) {
                 <h3 className="text-sm font-bold">{t('h_need_help_title')}</h3>
                 <p className='text-xs leading-5'>{t('p_need_help_body')}</p>
                 <br/>
-                <a className='text-xs color-blue-dark font-bold'>Contact us</a>
+                <a className='text-xs color-blue-dark font-bold'>Contact us: {cart}</a>
                 <br/>
                 <a className='text-xs color-blue-dark font-bold'>Visit Help Center</a>
   

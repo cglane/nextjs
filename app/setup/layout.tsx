@@ -1,8 +1,17 @@
 
+
 import HeadNav from '../ui/progress/headnav';
 import { getSession } from "@/auth";
-import LeftColumn from '../ui/setup/left_column';
+// import LeftColumn from '../ui/setup/left_column';
 import HelpBubble from '../ui/help_bubble';
+import ProgressHeader from '../ui/setup/progress_header';
+
+import dynamic from 'next/dynamic'
+ 
+// This fixes issue where there is a disconnect between server and client rendering
+const LeftColumn = dynamic(() => import('../ui/setup/left_column'), { ssr: true })
+
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const session = getSession()
 
@@ -15,14 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <LeftColumn/>
                 </div>                
                 <div className="md:flex-auto md:block w-full">
-                    <div className='md:flex'> 
-                        <div className='w-6/12'>
-                            <h1>Practice Area Configuration</h1>
-                        </div>
-                        <div className='w-6/12 text-right'>
-                            <span>Hello</span>
-                        </div>
-                    </div>
+                    <ProgressHeader/>
                     {children} 
                 </div>
                 <div className="md:flex-none md:block md:w-2/12 md:p-4">

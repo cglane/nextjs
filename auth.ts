@@ -1,5 +1,5 @@
 
-import {cookies} from "next/headers";
+// import {cookies} from "next/headers";
 
 export type Session = {
   token: string,
@@ -17,7 +17,8 @@ export type Firm = {
 };
 export  function getSession() : Session {
   return {
-    "token": cookies().get('auth_session')?.value || "",
+    "token": "hello",
+    // "token": cookies().get('auth_session')?.value || "",
     "user": {
       "id": "123",
       "name": "Charles Lane",
@@ -32,5 +33,5 @@ export  function getSession() : Session {
 }
 
 export function setSession() {
-  cookies().set('auth_session', '')
+  // cookies().set('auth_session', '')
 }
