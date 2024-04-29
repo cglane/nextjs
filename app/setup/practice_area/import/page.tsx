@@ -8,13 +8,13 @@ export default  function Page() {
 
   const {replace} = useStageStore();
   const handleClickListener = () => {
-    replace({"title": "hello", "index": 2})
-    router.push("/setup/practice_area/import")
+    replace({"title": "import", "index": 2})
+    router.push("/setup/practice_area/import_list")
   };
     return (
     <main>
           <button onClick={handleClickListener}>
-            Initial View
+            Import
       </button>  
     </main>
   );

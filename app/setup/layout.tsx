@@ -7,9 +7,10 @@ import HelpBubble from '../ui/help_bubble';
 import ProgressHeader from '../ui/setup/progress_header';
 
 import dynamic from 'next/dynamic'
+import { FaceSmileIcon } from '@heroicons/react/24/outline';
  
 // This fixes issue where there is a disconnect between server and client rendering
-const LeftColumn = dynamic(() => import('../ui/setup/left_column'), { ssr: true })
+const LeftColumn = dynamic(() => import('../ui/setup/left_column'), { ssr: false })
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {

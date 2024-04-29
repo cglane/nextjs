@@ -9,12 +9,12 @@ export default  function Page() {
   const {replace} = useStageStore();
   const handleClickListener = () => {
     replace({"title": "hello", "index": 2})
-    router.push("/setup/practice_area/import")
+    router.push("/setup")
   };
     return (
     <main>
           <button onClick={handleClickListener}>
-            Initial View
+            Import Progress
       </button>  
     </main>
   );
