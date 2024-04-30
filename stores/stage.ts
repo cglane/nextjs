@@ -13,7 +13,7 @@ type StageStore = {
 
 export const useStageStore = create<StageStore>((set) => ({
     // TODO: Make i18n
-    stage: {"title": "Practice Area Configuration", "subTitle": "Set up stages", "index": 0},
+    stage: {"title": "Practice Area Configuration", "subTitle": "Import and Create", "index": 0},
     replace: (payload:Stage) => set({stage:payload}),
     // remove: () => set({}),
     // removeAll: () => set({ }),

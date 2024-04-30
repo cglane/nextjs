@@ -19,7 +19,12 @@ export default function ProgressHeader(props:any) {
             </div>
             <div className="md:m-4 md:flex-none md:w-6/12">
                 
-                <StatusCheckBar/>
+                <StatusCheckBar currentIndex= {stage.index} stages={[
+                    0,
+                    1,
+                    2,
+                    3
+                ]}/>
             </div>   
         </div>
     </div>
