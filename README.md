@@ -35,3 +35,7 @@ Why? Why not.
     - Use Tailwind as much as you can, custom classes should be used only if tailwind classes have been exhausted
     -All components should be tested on 3 screen widths
     - Always use 'md' when thinking about desktop screens.
+
+
+# Warnings
+- Using the "use client" tag with next-translate can have strange hydration errors
