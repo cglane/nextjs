@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 export type Stage = {
     title: string;
+    subTitle: string;
     index: number;
   };
 type StageStore = {
@@ -11,7 +12,8 @@ type StageStore = {
 }
 
 export const useStageStore = create<StageStore>((set) => ({
-    stage: {"title": "Practice Area Configuration", "index": 0},
+    // TODO: Make i18n
+    stage: {"title": "Practice Area Configuration", "subTitle": "Set up stages", "index": 0},
     replace: (payload:Stage) => set({stage:payload}),
     // remove: () => set({}),
     // removeAll: () => set({ }),

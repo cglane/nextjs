@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic'
  
 // This fixes issue where there is a disconnect between server and client rendering
 const LeftColumn = dynamic(() => import('../ui/setup/left_column'), { ssr: false })
-const HelpBubble = dynamic(() => import('../ui/help_bubble'), { ssr: true })
+const HelpBubble = dynamic(() => import('../ui/help_bubble'), { ssr: false })
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
