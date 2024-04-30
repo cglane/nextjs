@@ -9,7 +9,7 @@ export default  function Page() {
   const {replace, stage} = useStageStore();
   
   const handleClickListener = () => {
-    replace({"title": "Import List", "index": 2})
+    replace({"title": "Import List", "index": 3, "subTitle": "import"})
     router.push("/setup/practice_area/import_list")
   };
     return (
