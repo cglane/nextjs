@@ -1,7 +1,7 @@
 
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import HeadNav from '../app/ui/progress/headnav'
+import HeadNav from '../../../app/ui/progress/headnav'
 // Mocking the useContext hook to provide a fake context
 const mockUseContext = jest.fn();
 jest.mock('react', () => ({
