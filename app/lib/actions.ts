@@ -111,3 +111,21 @@ export async function authenticate(
   //   throw error;
   // }
 }
+
+
+export async function updateProgress(firm_id: string, current_path:string) {
+  // const { customerId, amount, status } = UpdateInvoice.parse({
+  //   customerId: formData.get('customerId'),
+  //   amount: formData.get('amount'),
+  //   status: formData.get('status'),
+  // });
+ 
+  // const amountInCents = amount * 100;
+ 
+  await sql`
+    UPDATE progress
+    SET current_path = ${current_path}
+    WHERE firm_id = ${firm_id}
+  `;
+  
+}
