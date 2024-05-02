@@ -7,6 +7,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  Progress
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -269,5 +270,24 @@ export async function getUser(email: string) {
   } catch (error) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
+  }
+}
+
+
+
+export async function fetchProgress(firmId:string) {
+  // Add noStore() here to prevent the response from being cached.
+  // This is equivalent to in fetch(..., {cache: 'no-store'}).
+  try {
+    noStore();
+    // Don't do this in production :)
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    const data = await sql<Progress>`SELECT * FROM progress where firm_id=${firmId}`;
+    return data.rows[0] as Progress;
+
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch progress data.');
   }
 }

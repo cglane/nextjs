@@ -86,3 +86,11 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+
+export type Progress = {
+  id: string;
+  name: string;
+  firm_id: string;
+  current_path: string;
+};
