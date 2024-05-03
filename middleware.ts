@@ -12,9 +12,11 @@ export async function middleware(request: NextRequest) {
     // if(!session) {
     //     return NextResponse.redirect(new URL('/login', request.url))
     // }
+    // This should be a constant
     if (request.nextUrl.pathname.startsWith('/setup/practice_area')) {
       const localProgress = await fetchProgress('1')
-      console.log(request.nextUrl.pathname, localProgress.current_path)
+      console.log('path saved in db', localProgress.current_path)
+      console.log('path that we are currently on',request.nextUrl.pathname)
       if (localProgress.current_path != request.nextUrl.pathname){
         return NextResponse.redirect(new URL(localProgress.current_path, request.url))
       }

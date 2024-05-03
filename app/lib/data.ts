@@ -306,7 +306,7 @@ export async function fetchProgress(firmId:string) {
   try {
     noStore();
     // Don't do this in production :)
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const data = await sql<Progress>`SELECT * FROM progress where firm_id=${firmId}`;
     return data.rows[0] as Progress;

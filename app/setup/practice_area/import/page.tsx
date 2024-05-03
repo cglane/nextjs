@@ -10,13 +10,13 @@ export default  function Page() {
 
   const {replace, stage} = useStageStore();
   
-  const handleClickListener = () => {
+  const handleClickListener = async() => {
     let nextPathName = "/setup/practice_area/import_list"
-    updateProgress('1', nextPathName).then(()=> {
-      
-      replace({"title": "Import List", "index": 2, "subTitle": "import"})
-      router.push(nextPathName)
-    })
+    console.log('update progress to ', nextPathName)
+    await updateProgress('1', nextPathName)      
+    replace({"title": "Import List", "index": 2, "subTitle": "import"})
+    router.push(nextPathName)
+    
 
   };
     return (
