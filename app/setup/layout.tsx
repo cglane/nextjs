@@ -28,7 +28,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
                     <ProgressHeader/>
                     {children} 
                 </div>
-                <div className="md:flex-none md:block md:w-2/12 md:p-4">
+                <div className="md:flex-none md:block md:w-2/12 md:p-4 md:mt-0">
                     <HelpBubble/>
                 </div>
             </div>
