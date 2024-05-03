@@ -1,10 +1,8 @@
 
 "use client"
 import { updateProgress } from "@/app/lib/actions";
-// import { updateProgress } from "@/app/lib/data";
 import { useStageStore } from "@/stores/stage";
 import { useRouter } from 'next/navigation'
-
 export default  function Page() {      
   const router = useRouter()
 
@@ -12,7 +10,6 @@ export default  function Page() {
   
   const handleClickListener = async() => {
     let nextPathName = "/setup/practice_area/import_list"
-    console.log('update progress to ', nextPathName)
     await updateProgress('1', nextPathName)      
     replace({"title": "Import List", "index": 2, "subTitle": "import"})
     router.push(nextPathName)

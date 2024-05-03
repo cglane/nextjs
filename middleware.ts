@@ -13,16 +13,13 @@ export async function middleware(request: NextRequest) {
     //     return NextResponse.redirect(new URL('/login', request.url))
     // }
     // This should be a constant
-    console.log('middleware path ', request.nextUrl.pathname)
     if (request.nextUrl.pathname.startsWith('/setup/practice_area')) {
-      // let current_path = request.cookies.get('progress') as unknown as  string
       let current_path =  request.cookies.get('progress')?.value || ""
 
-      console.log(current_path, 'progress')
       if (!current_path){
-        const localProgress = await fetchProgress('1')
-        request.cookies.set('progress', localProgress.current_path)
-        current_path as string
+        // If we don't have a cookie record of our progress, fetch from db
+        const localProgress = await fetchProgress('1')      
+        request.cookies.set('progress', localProgress.current_path)        
       }
       
 

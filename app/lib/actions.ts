@@ -5,6 +5,8 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 // import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
+import {cookies} from "next/headers";
+
 export type State = {
   errors?: {
     customerId?: string[];
@@ -112,16 +114,15 @@ export async function authenticate(
   // }
 } 
 
-import {cookies} from "next/headers";
 
 export async function updateProgress(firm_id: string, current_path:string) {
-  console.log('update progress to ', current_path)
   await sql`
     UPDATE progress
     SET current_path = ${current_path}
     WHERE firm_id = ${firm_id}
   `;
-  console.log('progress updated' )
-    cookies().set('progress', current_path)
+  // Expire cookie after a day
+  const oneDay: number = 24 * 60 * 60 * 1000
+  cookies().set('progress', current_path,  { expires: Date.now() - oneDay })
 
 }
