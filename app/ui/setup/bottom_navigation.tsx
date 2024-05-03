@@ -20,15 +20,15 @@ export default function BottomNavigation(props:any) {
     };
     return (
         <div className="w-full flex">
-            <div className=' w-9/12 '>
-                <button onClick={goBackClickListener} className="mt-4 rounded-md bg-white px-4 py-3 text-sm font-medium text-black transition-colors hover:bg-blue-400 border-2"> 
+            <div className=' w-9/12  md:m-6'>
+                <button onClick={goBackClickListener} className="mt-4 rounded-md bg-white px-4 py-3 text-xs font-medium text-black transition-colors hover:bg-blue-400 border-2"> 
                     <span className='p-4'>&#60;</span>
                     {props.buttonBack}
                 </button>
 
             </div>
-            <div className='w-3/12 right-0'>
-                <button onClick={handleClickListener}className="mt-4 rounded-md bg-sky-950 px-4 py-3 text-sm text-white font-bold transition-colors hover:bg-blue-400">
+            <div className='w-3/12 md:m-6'>
+                <button onClick={handleClickListener}className="mt-4 rounded-md bg-sky-950 px-4 py-3 text-xs text-white font-bold transition-colors hover:bg-blue-400">
                     {props.buttonNext}
                 </button>  
             </div>
