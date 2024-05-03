@@ -12,6 +12,7 @@ export default  function Page() {
 
   const {replace} = useStageStore();
   const handleClickListener = async () => {
+    console.log('handle click listener')
     let nextPathName = "/setup/practice_area/import"
     await updateProgress('1', nextPathName)
 

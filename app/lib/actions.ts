@@ -110,14 +110,18 @@ export async function authenticate(
   //   }
   //   throw error;
   // }
-}
+} 
 
+import {cookies} from "next/headers";
 
 export async function updateProgress(firm_id: string, current_path:string) {
+  console.log('update progress to ', current_path)
   await sql`
     UPDATE progress
     SET current_path = ${current_path}
     WHERE firm_id = ${firm_id}
   `;
-  
+  console.log('progress updated' )
+    cookies().set('progress', current_path)
+
 }
