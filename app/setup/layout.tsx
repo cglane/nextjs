@@ -21,7 +21,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
           <HeadNav session={session}/>
           <div>
             <div className='md:flex w-full md:h-screen'>
-                <div className="md:flex-none md:block md:w-2/12 md:border-2 w-full">
+                <div className="md:flex-none md:block md:w-2/12 md:border-2 w-full md:p-4">
                     <LeftColumn/>
                 </div>                
                 <div className="md:flex-auto md:block w-full">

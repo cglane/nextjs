@@ -13,14 +13,22 @@ export default function BottomNavigation(props:any) {
         await updateProgress('1', props.nextPathName)
         router.push(props.nextPathName)
     };
+    const goBackClickListener  = async () => {
+        // let nextPathName = "/setup/practice_area/import"
+        await updateProgress('1', props.lastPathName)
+        router.push(props.lastPathName)
+    };
     return (
         <div className="w-full flex">
-            <div className='flex'>
-                <button>{props.buttonBack}</button>
+            <div className=' w-9/12 '>
+                <button onClick={goBackClickListener} className="mt-4 rounded-md bg-white px-4 py-3 text-sm font-medium text-black transition-colors hover:bg-blue-400 border-2"> 
+                    <span className='p-4'>&#60;</span>
+                    {props.buttonBack}
+                </button>
 
             </div>
-            <div className='flex float-right'>
-                <button onClick={handleClickListener}className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400">
+            <div className='w-3/12 right-0'>
+                <button onClick={handleClickListener}className="mt-4 rounded-md bg-sky-950 px-4 py-3 text-sm text-white font-bold transition-colors hover:bg-blue-400">
                     {props.buttonNext}
                 </button>  
             </div>
