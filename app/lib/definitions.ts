@@ -94,3 +94,17 @@ export type Progress = {
   firm_id: string;
   current_path: string;
 };
+export type CaseType = {
+  id: string;
+  name: string;
+  firm_id: string;
+  import_names: string;
+};
+export type CaseStatus = {
+  id: string;
+  name: string;
+  firm_id: string;
+  case_type_id: string
+  description: string;
+  import_names: string;
+};

@@ -7,7 +7,9 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
-  Progress
+  Progress,
+  CaseType,
+  CaseStatus
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -309,6 +311,40 @@ export async function fetchProgress(firmId:string) {
 
     const data = await sql<Progress>`SELECT * FROM progress where firm_id=${firmId}`;
     return data.rows[0] as Progress;
+
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch progress data.');
+  }
+}
+
+export async function fetchCaseType(id:string) {
+  // Add noStore() here to prevent the response from being cached.
+  // This is equivalent to in fetch(..., {cache: 'no-store'}).
+  try {
+    noStore();
+    // Don't do this in production :)
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const data = await sql<CaseType>`SELECT * FROM case_types where id=${id}`;
+    return data.rows[0] as CaseType;
+
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch progress data.');
+  }
+}
+
+export async function fetchCaseStatus(id:string) {
+  // Add noStore() here to prevent the response from being cached.
+  // This is equivalent to in fetch(..., {cache: 'no-store'}).
+  try {
+    noStore();
+    // Don't do this in production :)
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const data = await sql<CaseStatus>`SELECT * FROM case_statuses where id=${id}`;
+    return data.rows[0] as CaseStatus;
 
   } catch (error) {
     console.error('Database Error:', error);

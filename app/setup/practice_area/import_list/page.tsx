@@ -26,6 +26,9 @@ export default  function Page() {
 >
             Click to Move on to the Next Module
       </button>  
+      <button onClick={()=> router.push("/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit")}>
+              Click to Go to a PA
+            </button>
     </main>
   );
 }
