@@ -39,3 +39,4 @@ Why? Why not.
 
 # Warnings
 - Using the "use client" tag with next-translate can have strange hydration errors
+- If you see a '... is not a function' error it could be because you have used 'use client' where you shouldn't have
