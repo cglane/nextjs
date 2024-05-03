@@ -27,7 +27,7 @@ export default function BottomNavigation(props:any) {
                 </button>
 
             </div>
-            <div className='w-3/12 m-6'>
+            <div className='md:w-4/12 m-6 w-6/12'>
                 <button onClick={handleClickListener}className="mt-4 rounded-md bg-sky-950 px-4 py-3 text-xs text-white font-bold transition-colors hover:bg-blue-400">
                     {props.buttonNext}
                 </button>  

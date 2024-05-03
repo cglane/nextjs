@@ -21,14 +21,14 @@ export default async function Layout({ children }: { children: React.ReactNode }
           <HeadNav session={session}/>
           <div>
             <div className='md:flex w-full md:h-screen'>
-                <div className="md:flex-none md:block md:w-2/12 w-full md:p-4 rounded-md border border-gray-200">
+                <div className="hidden md:flex-none md:block md:w-2/12 w-full md:p-4 rounded-md border border-gray-200">
                     <LeftColumn/>
                 </div>                
                 <div className="md:flex-auto md:block w-full">
                     <ProgressHeader/>
                     {children} 
                 </div>
-                <div className="md:flex-none md:block md:w-2/12 md:p-4 md:mt-0 ">
+                <div className="md:flex-none md:block md:w-3/12 md:p-4 md:mt-0 ">
                     <HelpBubble/>
                 </div>
             </div>
