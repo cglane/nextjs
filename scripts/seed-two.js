@@ -13,20 +13,12 @@ async function createTable(client) {
         current_path VARCHAR(255) NOT NULL
       );
     `;
-    client.sql`
-        INSERT INTO progress (id, name, email, image_url)
-        VALUES ('1', 'progress', '1', '/setup/practice_area/import')
+    const value = await client.sql`
+        INSERT INTO progress (id, name, firm_id, current_path)
+        VALUES ('126eed9c-c90c-4ef6-a4a8-fcf7408d3c66', 'progress', '1', '/setup/practice_area/import')
         ON CONFLICT (id) DO NOTHING;
-      `,
-    // const insertProgress = await Promise.all(
-    //   customers.map(
-    //     (customer) => client.sql`
-    //     INSERT INTO customers (id, name, email, image_url)
-    //     VALUES (${customer.id}, ${customer.name}, ${customer.email}, ${customer.image_url})
-    //     ON CONFLICT (id) DO NOTHING;
-    //   `,
-    //   ),
-    // );
+      `
+
   }catch (error) {
     console.error('Error seeding table:', error);
     throw error;

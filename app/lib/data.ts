@@ -1,3 +1,4 @@
+"use client"
 import { sql } from '@vercel/postgres';
 import {
   CustomerField,
@@ -273,15 +274,39 @@ export async function getUser(email: string) {
   }
 }
 
+// # Tempora
+// let singletonProgress = {id:'126eed9c-c90c-4ef6-a4a8-fcf7408d3c66', name:'progress', firm_id:'1', current_path: '/setup/practice_area/import'} as Progress
+// export async function updateProgress(firmId: string, currentPath: string){
+//   const response = await fetch('/setup/practice_area', {
+//     method: 'POST',
+//     body: JSON.stringify({firmId: firmId, currentPath: currentPath})
 
+//     // TODO: Set ChildType and ChildID headers
 
+//     // headers: {"Authorization": `Bearer ${authToken}`, "ChildType": 'attorney', "ChildId": '86244'}
+//   }, );
+//   // TODO: Handle errors better
+//   if (response.status == 401){
+//         console.log("Bad Error: Should redirect to Login")
+//         // return redirect("/login")
+//       }
+//   else{
+//     const data = await response.json();
+//     return data
+//   }
+//   // singletonProgress.current_path = currentPath
+//   //   await sql`UPDATE progress
+//   //   SET current_path = ${currentPath}
+//   //   WHERE firm_id = ${firmId}
+//   // `;
+// }
 export async function fetchProgress(firmId:string) {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
   try {
     noStore();
     // Don't do this in production :)
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Progress>`SELECT * FROM progress where firm_id=${firmId}`;
     return data.rows[0] as Progress;

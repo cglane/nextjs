@@ -5,13 +5,15 @@ import { getSession } from "@/auth";
 import ProgressHeader from '../ui/setup/progress_header';
 
 import dynamic from 'next/dynamic'
- 
+
 // This fixes issue where there is a disconnect between server and client rendering
 const LeftColumn = dynamic(() => import('../ui/setup/left_column'), { ssr: false })
 const HelpBubble = dynamic(() => import('../ui/help_bubble'), { ssr: false })
 
+//   const localProgress = await fetchProgress('1')
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const session = getSession()
 
   return (
