@@ -7,19 +7,19 @@ export default function ProgressHeader(props:any) {
     const { stage} = useStageStore();
     // Should we use store everywhere or just in the parent element?
     return (
-        <div className='md:flex'> 
-        <div className='md:w-9/12'>
-            <h1>{stage.title}</h1>
-        </div>
+        <div className='md:flex p-4'> 
+            <div className='md:w-9/12 font-semibold text-xs text-center md:text-left'>
+                <h1>{stage.title}</h1>
+            </div>
         <div className='flex md:w-6/12 '>
-            <div className="m-2 md:w-3/12 w-full">
-                <span className="text-xs font-bold">
+            <div className="md:w-6/12 w-9/12">
+                <span className="text-xs font-semibold">
                     {stage.subTitle}
                 </span>            
             </div>
-            <div className="md:m-4 flex md:w-6/12 w-full">
+            <div className="flex md:w-6/12 w-3/12">
                 
-                <StatusCheckBar currentIndex= {stage.index}stages={[
+                <StatusCheckBar currentIndex= {stage.index} stages={[
                     0,
                     1,
                     2,

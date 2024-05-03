@@ -18,7 +18,7 @@ export default  function Page() {
         <p className='text-xs leading-4 p-1'>{t('p_setup_pa_body')}</p>
         <br/>
         <br/>
-        <h1>Placeholder for Video...</h1>
+        <h1>Placeholder for Video...</h1> 
 
       </div>
         <BottomNavigation buttonBack={t('button_back')}
