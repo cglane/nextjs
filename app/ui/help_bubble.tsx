@@ -6,7 +6,7 @@ export default function HelpBubble(props:any) {
 
     return (
         <div>
-        <div className='md:flex-auto w-full md:rounded:sm'>
+        <div className='md:flex-auto w-full rounded-md border border-gray-200'>
             <div className="flex rounded-xl bg-white shadow-sm p-4">
               <div className="w-16 m-1">                     
                  <QuestionMarkCircleIcon className="h-6 w-6 color-blue-dark bg-gray-200 rounded " />

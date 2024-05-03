@@ -8,7 +8,7 @@ import {
 export default  function Page() {     
   const { t, lang } = useTranslation('progress')
     return (
-    <main className='md:rounded:sm bg-slate-100 md:m-5 h-screen'>
+    <main className='md:m-5 rounded-md border border-gray-200'>
       <div className="w-12/12 h-3/6 md:h-auto bg-white rounded-md  md:p-20 items-center justify-center">
         <div className="flex items-center justify-center">
           <WrenchIcon className='w-10 h-10'/>
