@@ -138,18 +138,11 @@ const CaseTypeFormSchema = z.object({
 const CreateCaseType = CaseTypeFormSchema.omit({ id: true});
 const UpdateCaseType = CaseTypeFormSchema.omit({ id: true});
 
-export async function updateCaseType(id: string, importName: string) {
-  // const { import_names } = UpdateCaseType.parse({
-  //   import_names: formData.get('import_names'),
-  // });
- 
- 
+export async function updateCaseType(id: string, importNames: string[]) {
   await sql`
-    UPDATE case_types
-    SET import_names = ${importName}
-    WHERE id = ${id}
-  `;
+  UPDATE case_types
+  SET import_names = Array[${JSON.stringify(importNames)}]
+  WHERE id = ${id}
+ `;
  
-  // revalidatePath('/dashboard/invoices');
-  // redirect('/dashboard/invoices');
 }

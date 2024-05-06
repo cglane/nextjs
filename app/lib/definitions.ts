@@ -98,7 +98,7 @@ export type CaseType = {
   id: string;
   name: string;
   firm_id: string;
-  import_names: string;
+  import_names: Array<string>;
 };
 export type CaseStatus = {
   id: string;
