@@ -26,6 +26,7 @@ export function RemoveMapping({ caseTypeId, importNames, importName }: { caseTyp
         updateCaseType(caseTypeId, newArray)
     }
     return (
+        
         <div onClick={(e:any) => reduceAndReuse()}>
             <button className="rounded-md border p-2 hover:bg-gray-100">
             <span className="sr-only">Remove</span>

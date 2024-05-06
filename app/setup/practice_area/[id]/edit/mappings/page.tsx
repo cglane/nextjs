@@ -16,7 +16,7 @@ export default async function Page({ params }:  { params: { id: string } }) {
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
     // Annoyingly vercel postgres has bad support ofr list of strings
     importNames = JSON.parse(caseType.import_names)
-
+    
     return (
     <main>
       <h1>{caseType.name}</h1>

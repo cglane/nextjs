@@ -148,6 +148,6 @@ export async function updateCaseType(id: string, importNames: string[]) {
  `;
  // i would be lying if i understood this
  // only seems to work sometimes
-
- revalidatePath("/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit/mappings")
+// won't really work if we are using read replica either
+//  revalidatePath("/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit/mappings")
 }
