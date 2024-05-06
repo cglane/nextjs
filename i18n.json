@@ -12,7 +12,7 @@
         "/progress/(overview)": [
             "progress"
         ],
-        "/setup/*": [
+        "rgx:^/setup": [
             "setup"
         ]
     }

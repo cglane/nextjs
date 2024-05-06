@@ -13,6 +13,7 @@ I have found that changing screen size while developing helps prevent conflicts.
 # i18N
 Variables should be named with the element type first followed by reference to the text itself. For example, 'h_welcome_title' == "Welcome to Case Status"
 Translations are route specific to avoid collisions. Therefore any text shown on the /progress endpoint should exist in the 'progress.json' file.
+We define the 'pages' in the i18n.json file.
 
 # Authentication
 Authentication is handled through the middleware.ts file. This stands between all page requests and screen rendering. We are persisting a token granted from the Api in our cookies. Should we receive a 403 from the Api we should route the user back to the login screen.
