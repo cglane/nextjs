@@ -21,11 +21,11 @@ export default async function Page({ params }:  { params: { id: string } }) {
         <div></div>
         <div></div>
       </div>
-      <div>
+      {/* <div>
         <div><h2>{t('h2_mapping_instructions_2', {integration:integration})}</h2></div>
         <div></div>
         <div></div>
-      </div>
+      </div> */}
     </main>
   );
 }

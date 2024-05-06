@@ -126,3 +126,30 @@ export async function updateProgress(firm_id: string, current_path:string) {
   cookies().set('progress', current_path,  { expires: Date.now() - oneDay })
 
 }
+
+
+const CaseTypeFormSchema = z.object({
+  id: z.string(),
+  import_names: z.string({
+    invalid_type_error: 'Please select an import name.',
+  }),
+});
+ 
+const CreateCaseType = CaseTypeFormSchema.omit({ id: true});
+const UpdateCaseType = CaseTypeFormSchema.omit({ id: true});
+
+export async function updateCaseType(id: string, importName: string) {
+  // const { import_names } = UpdateCaseType.parse({
+  //   import_names: formData.get('import_names'),
+  // });
+ 
+ 
+  await sql`
+    UPDATE case_types
+    SET import_names = ${importName}
+    WHERE id = ${id}
+  `;
+ 
+  // revalidatePath('/dashboard/invoices');
+  // redirect('/dashboard/invoices');
+}
