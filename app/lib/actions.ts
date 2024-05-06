@@ -139,10 +139,13 @@ const CreateCaseType = CaseTypeFormSchema.omit({ id: true});
 const UpdateCaseType = CaseTypeFormSchema.omit({ id: true});
 
 export async function updateCaseType(id: string, importNames: string[]) {
+  console.log(importNames, 'in action')
+  console.log(`${JSON.stringify(importNames)}`, 'jsonified')
   await sql`
   UPDATE case_types
   SET import_names = Array[${JSON.stringify(importNames)}]
   WHERE id = ${id}
  `;
- 
+ // i would be lying if i understood this
+ revalidatePath("/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit/mappings")
 }
