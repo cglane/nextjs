@@ -11,6 +11,9 @@
         ],
         "/progress/(overview)": [
             "progress"
+        ],
+        "/setup/*": [
+            "setup"
         ]
     }
 }

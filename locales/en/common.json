@@ -1,4 +1,4 @@
 {
-    "title": "Hello this is common",
-    "variable-example": "Using a variable {{count}}"
+    "h_need_help_title": "Need help?",
+    "p_need_help_body": "Our Customer Service team is here to help you with any question you have with your onboarding"
 }

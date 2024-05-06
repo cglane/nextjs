@@ -2,7 +2,7 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import useTranslation from 'next-translate/useTranslation'
 
 export default function HelpBubble(props:any) {
-    const { t, lang } = useTranslation('progress')
+    const { t, lang } = useTranslation('common')
 
     return (
         <div>
