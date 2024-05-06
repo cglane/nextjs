@@ -147,5 +147,7 @@ export async function updateCaseType(id: string, importNames: string[]) {
   WHERE id = ${id}
  `;
  // i would be lying if i understood this
+ // only seems to work sometimes
+
  revalidatePath("/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit/mappings")
 }
