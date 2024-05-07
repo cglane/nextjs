@@ -7,7 +7,6 @@ import { updateCaseType } from '@/app/lib/actions';
 
 export default function MappingForm(props:any) {
     const [importNames, setImportNames] = useState<string[]>(props.importNames);
-    const [likes, setLikes] = useState(0);
     const setTheState = (value: string[]) => {
         setImportNames(value)
     }
@@ -16,14 +15,11 @@ export default function MappingForm(props:any) {
     }
     // Temporary
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
-    function handleClick() {
-        setLikes(likes + 1);
-      }
+
     return (
         <div> 
             <div>
-            <   button onClick={handleClick}>Likes ({likes})</button>
-
+                    <div><span>{props.mappedNameHeader}</span></div>
                     {importNames?.map((importName) => (
                         <div key={importName}>
                             <div>Import Name: {importName}</div>
@@ -34,6 +30,8 @@ export default function MappingForm(props:any) {
                     
                 </div>
                 <div>
+                    <div><span>{props.unmappedNameHeader}</span></div>
+
                     <h1>Add Mappings</h1>
                 {otherImportNames.map((importName) => (
                         <div key={importName}>
