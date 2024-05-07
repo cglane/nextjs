@@ -19,7 +19,7 @@ export default function BottomNavigation(props:any) {
     //     router.push(props.lastPathName)
     // };
     return (
-        <div className="w-full flex h-3/6">
+        <div className="w-full flex h-3/6 bg-slate-100 ">
             <div className=' w-9/12  m-6'>
                 <button onClick={props.goBackClickListener} className="mt-4 rounded-md bg-white px-4 py-3 text-xs font-medium text-black transition-colors hover:bg-blue-400 border-2"> 
                     <span className='p-4'>&#60;</span>

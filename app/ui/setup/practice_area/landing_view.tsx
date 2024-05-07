@@ -23,7 +23,7 @@ export default  function LandingView(props:any) {
 
       return (
       <div>
-        <div className="w-12/12 h-3/6 md:h-auto bg-white rounded-md  md:p-20 items-center justify-center">
+        <div className="w-12/12 h-3/6 md:h-auto bg-white rounded-md items-center justify-center p-12">
           <div className="flex items-center justify-center">
             <WrenchIcon className='w-10 h-10'/>
           </div>

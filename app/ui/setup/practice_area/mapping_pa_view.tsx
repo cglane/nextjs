@@ -20,6 +20,10 @@ export default function MappingForm(props:any) {
 
     return (
         <div> 
+            <div className='p-12'>
+            <h1 className='text-lg text-sky-950 font-bold text-base'>{props.caseTypeName}</h1>
+            <p className='text-sm leading-4 p-1'>{props.description}</p>
+            <br></br>
             <div className='grid rounded-md border border-gray-200'>
                     <div className='bg-slate-200  border border-gray-200 text-xs p-2 h-8'><span>{props.mappedNameHeader}</span></div>
                     {importNames?.map((importName) => (
@@ -60,6 +64,8 @@ export default function MappingForm(props:any) {
                     ))}
 
                 </div>
+            </div>
+           
                 <BottomNavigation buttonBack="Back" buttonNext="Save and Continue" handleClickListener={saveAndContinue}/>
                 {/* <ContinueButton handleClickListener={saveAndContinue}/> */}
                 {/* <button onClick={saveAndContinue}>Save and Continue</button> */}
