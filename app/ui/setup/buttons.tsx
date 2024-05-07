@@ -3,7 +3,7 @@ import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { updateCaseType } from '@/app/lib/actions';
 
 
-export function RemoveMapping({ callback, caseTypeId, importNames, importName }: { callback:(n:string[]) => any, caseTypeId: string, importNames:string[], importName: string }) {
+export function RemoveMapping({ callback, caseTypeId, importNames, importName }: { callback:(value:string[]) => void, caseTypeId: string, importNames:string[], importName: string }) {
     const reduceAndReuse = () => {
         importNames = importNames.filter((x)=> x != importName)
         console.log(importNames, 'import names in reduce reuse')
@@ -21,10 +21,10 @@ export function RemoveMapping({ callback, caseTypeId, importNames, importName }:
     );
   }
 
-  export function AddMapping({ callback, caseTypeId, importNames, importName }: {callback:(n:string[]) => any, caseTypeId: string, importNames:string[], importName: string }) {
+  export function AddMapping({ callback, caseTypeId, importNames, importName }: {callback:(value:string[]) => void, caseTypeId: string, importNames:string[], importName: string }) {
     const reduceAndReuse = () => {
-        if (!importNames.includes(importName)){
-            let newArray = importNames
+        if (!importNames?.includes(importName)){
+            let newArray = [...importNames]
             newArray.push(importName)
             console.log(newArray, 'new array')
             callback(newArray)

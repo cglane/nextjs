@@ -8,7 +8,9 @@ import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
 export default function MappingForm(props:any) {
     const [importNames, setImportNames] = useState<string[]>(props.importNames);
     const [likes, setLikes] = useState(0);
-
+    const setTheState = (value: string[]) => {
+        setImportNames(value)
+    }
     // Temporary
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
     function handleClick() {
@@ -22,7 +24,7 @@ export default function MappingForm(props:any) {
                     {importNames?.map((importName) => (
                         <div key={importName}>
                             <div>Import Name: {importName}</div>
-                            <div><RemoveMapping callback={setImportNames}caseTypeId={props.caseTypeId} importNames={importNames} importName={importName}/></div>
+                            <div><RemoveMapping callback={setTheState}caseTypeId={props.caseTypeId} importNames={importNames} importName={importName}/></div>
                             </div>
                     ))}
 
@@ -33,7 +35,7 @@ export default function MappingForm(props:any) {
                 {otherImportNames.map((importName) => (
                         <div key={importName}>
                             <div>Import Name: {importName}</div>
-                            <div><AddMapping callback={setImportNames}caseTypeId={props.caseTypeId} importNames={importNames} importName={importName}/></div>
+                            <div><AddMapping callback={setTheState}caseTypeId={props.caseTypeId} importNames={importNames} importName={importName}/></div>
                             </div>
                     ))}
 
