@@ -3,10 +3,12 @@ import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { updateCaseType } from '@/app/lib/actions';
 
 
-export function RemoveMapping({ caseTypeId, importNames, importName }: { caseTypeId: string, importNames:string[], importName: string }) {
+export function RemoveMapping({ callback, caseTypeId, importNames, importName }: { callback:(n:string[]) => any, caseTypeId: string, importNames:string[], importName: string }) {
     const reduceAndReuse = () => {
         importNames = importNames.filter((x)=> x != importName)
-        updateCaseType(caseTypeId, importNames)
+        console.log(importNames, 'import names in reduce reuse')
+        callback(importNames)
+        // updateCaseType(caseTypeId, importNames)
     }
     return (
         <div onClick={(e:any) => reduceAndReuse()}>
@@ -19,11 +21,18 @@ export function RemoveMapping({ caseTypeId, importNames, importName }: { caseTyp
     );
   }
 
-  export function AddMapping({ caseTypeId, importNames, importName }: { caseTypeId: string, importNames:string[], importName: string }) {
+  export function AddMapping({ callback, caseTypeId, importNames, importName }: {callback:(n:string[]) => any, caseTypeId: string, importNames:string[], importName: string }) {
     const reduceAndReuse = () => {
-        let newArray = importNames
-        newArray.push(importName)
-        updateCaseType(caseTypeId, newArray)
+        if (!importNames.includes(importName)){
+            let newArray = importNames
+            newArray.push(importName)
+            console.log(newArray, 'new array')
+            callback(newArray)
+            // updateCaseType(caseTypeId, newArray)
+        }else{
+            console.log('add mapping called but did nothing')
+        }
+
     }
     return (
         
