@@ -17,7 +17,7 @@ export default async function Page({ params }:  { params: { id: string } }) {
     /// Temporary
     const integration = "Filevine"
     // Annoyingly vercel postgres has bad support for list of strings
-    importNames = JSON.parse(caseType.import_names)
+    // importNames = JSON.parse(caseType.import_names)
     
     return (
     <MainWrapper>      
