@@ -1,6 +1,4 @@
-import Form from '@/app/ui/invoices/edit-form';
-import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
-import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
+
 import { notFound } from 'next/navigation';
 import { fetchCaseType } from '@/app/lib/data';
 import useTranslation from 'next-translate/useTranslation'

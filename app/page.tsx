@@ -1,58 +1,30 @@
-import AcmeLogo from '@/app/ui/acme-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import styles from '@/app/ui/home.module.css';
-import { lust } from '@/app/ui/fonts';
-import Image from 'next/image';
-
+import LeftColumn from '@/app/ui/base/left_column'
+import RightColumn from '@/app/ui/base/right_column'
+import HeadNav from '@/app/ui/base/headnav';
+import { getSession } from "@/auth";
 
 export default function Page() {
-  return (
-    
-    <main className="flex min-h-screen flex-col p-6">
+    const session = getSession()
 
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-        <AcmeLogo />
-      </div>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`${lust.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
-          </p>
-          
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+    return (
+      <div>
+        <HeadNav session={session}/>
+        <div className='max-w-96 overflow-hidden'>
+          <hr></hr>
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          
-        <Image
-        src="/hero-desktop.png"        
-        width={1000}
-        height={760}
-        // Hidden class is for mobile only
-        // md is for desktop
-        className="hidden md:block"
-        alt="Screenshots of the dashboard project showing desktop version"
-  />
-<Image
-        src="/hero-mobile.png"
-        width={560}
-        height={620}
-        // Hidden class is for mobile only
-        // md is for desktop
-        className="block md:hidden"
-        alt="Screenshots of the dashboard project showing desktop version"
-/>
+      <div  className='md:overflow-hidden bg-blue-dark h-60'></div>
+
+      <div className='md:flex top-16 absolute w-full md:overflow-y-auto px-8 md:px-24 py-12'>
+        
+        <div className="md:flex-none md:w-5/12 md:max-w-4 w-full md:px-8">
+          <LeftColumn/>
+        </div>
+        <div className="md:flex-auto md:px-8">
+            <RightColumn/>
         </div>
       </div>
-    </main>
-  );
-}
+
+      </div>
+
+    )
+  }

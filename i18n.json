@@ -9,8 +9,8 @@
         "*": [
             "common"
         ],
-        "/progress/(overview)": [
-            "progress"
+        "/": [
+            "main"
         ],
         "rgx:^/setup": [
             "setup"

@@ -6,7 +6,7 @@ import { getNextPath, getLastPath } from '@/app/lib/utils';
 // Page functions as for gathering data from api/db and doing server side rendering
 export default  function Page() {     
   // TODO: Add props for bottom nav forward and backwards
-  const { t, lang } = useTranslation('progress')
+  const { t, lang } = useTranslation('main')
   // Temp 
   let nextPathName = getNextPath("/setup/practice_area")
   let lastPathName = getLastPath("/setup/practice_area")

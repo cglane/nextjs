@@ -1,6 +1,6 @@
 
 
-import HeadNav from '../ui/progress/headnav';
+import HeadNav from '../ui/base/headnav';
 import { getSession } from "@/auth";
 import ProgressHeader from '../ui/setup/progress_header';
 

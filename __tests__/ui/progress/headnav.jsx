@@ -1,7 +1,7 @@
 
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import HeadNav from '../../../app/ui/progress/headnav'
+import HeadNav from '../../../app/ui/base/headnav'
 // Mocking the useContext hook to provide a fake context
 const mockUseContext = jest.fn();
 jest.mock('react', () => ({
@@ -16,7 +16,7 @@ jest.mock('next/image', () => ({
 }));
 
 // Mocking the Progress component
-jest.mock('../app/ui/progress/progress_bar', () => () => <div>Progress</div>);
+jest.mock('@/app/ui/base/progress_bar', () => () => <div>Progress</div>);
 
 describe('HeadNav Component', () => {
   beforeEach(() => {
