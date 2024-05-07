@@ -310,6 +310,7 @@ export async function fetchProgress(firmId:string) {
     // await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const data = await sql<Progress>`SELECT * FROM progress where firm_id=${firmId}`;
+    console.log(data, 'data')
     return data.rows[0] as Progress;
 
   } catch (error) {

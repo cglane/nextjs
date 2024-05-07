@@ -11,12 +11,10 @@ export default  function LandingView(props:any) {
         const router = useRouter()
 
     const handleClickListener = async () => {
-        // let nextPathName = "/setup/practice_area/import"
         await updateProgress('1', props.nextPathName)
         router.push(props.nextPathName)
     };
     const goBackClickListener  = async () => {
-        // let nextPathName = "/setup/practice_area/import"
         await updateProgress('1', props.lastPathName)
         router.push(props.lastPathName)
     };

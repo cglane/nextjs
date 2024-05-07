@@ -15,9 +15,12 @@ export default function MappingForm(props:any) {
     const saveAndContinue = () => {
         updateCaseType(props.caseTypeId, importNames)
     }
+
     // Temporary
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
-
+    const goBackClickListener = () => {
+        alert('Go Back')
+    }
     return (
         <div> 
             <div className='p-12'>
@@ -66,9 +69,7 @@ export default function MappingForm(props:any) {
                 </div>
             </div>
            
-                <BottomNavigation buttonBack="Back" buttonNext="Save and Continue" handleClickListener={saveAndContinue}/>
-                {/* <ContinueButton handleClickListener={saveAndContinue}/> */}
-                {/* <button onClick={saveAndContinue}>Save and Continue</button> */}
+                <BottomNavigation buttonBack="Back" buttonNext="Save and Continue" handleClickListener={saveAndContinue} goBackClickListener={goBackClickListener}/>                
         </div>
 
     )
