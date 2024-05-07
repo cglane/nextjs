@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import LandingView from '@/app/ui/setup/practice_area/landing_view';
-import MainWrapper from '@/app/ui/setup/main_wrapper';
+import { MainWrapper } from '@/app/ui/setup/basic_elements';
 import { fetchProgress } from '@/app/lib/data';
 // Page functions as for gathering data from api/db and doing server side rendering
 export default  function Page() {     

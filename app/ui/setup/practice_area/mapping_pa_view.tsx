@@ -7,6 +7,7 @@ import { updateCaseType } from '@/app/lib/actions';
 import { AiSpan } from '../../widgets';
 import BottomNavigation from '../bottom_navigation';
 import { useRouter } from 'next/navigation'
+import {MainDescription, MainHeader} from '../basic_elements';
 
 // TODO change props to interface
 export default function MappingForm(props:any) {
@@ -29,8 +30,8 @@ export default function MappingForm(props:any) {
     return (
         <div> 
             <div className='p-12'>
-            <h1 className='text-lg text-sky-950 font-bold text-base'>{props.caseTypeName}</h1>
-            <p className='text-sm leading-4 p-1'>{props.description}</p>
+                <MainHeader>{props.caseTypeName}</MainHeader>
+                <MainDescription>{props.description}</MainDescription>
             <br></br>
             <div className='grid rounded-md border border-gray-200'>
                     <div className='bg-slate-200  border border-gray-200 text-xs p-2 h-8'><span>{props.mappedNameHeader}</span></div>

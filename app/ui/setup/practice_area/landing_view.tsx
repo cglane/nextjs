@@ -5,6 +5,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation'
 import { updateProgress } from "@/app/lib/actions";
+import { MainDescription, MainHeader } from '../basic_elements';
 
 export default  function LandingView(props:any) {      
     // TODO: Add props for bottom nav forward and backwards
@@ -26,8 +27,8 @@ export default  function LandingView(props:any) {
             <WrenchIcon className='w-10 h-10'/>
           </div>
           <br/>
-          <h1 className='text-sky-950 font-bold text-base'>{props.header}</h1>
-          <p className='text-xs leading-4 p-1'>{props.description}</p>
+          <MainHeader>{props.header}</MainHeader>
+          <MainDescription>{props.description}</MainDescription>
           <br/>
           <br/>
           <h1>Placeholder for Video...</h1> 

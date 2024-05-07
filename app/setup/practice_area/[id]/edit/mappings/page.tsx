@@ -6,8 +6,7 @@ import { fetchCaseType } from '@/app/lib/data';
 import useTranslation from 'next-translate/useTranslation'
 import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
 import MappingForm from '@/app/ui/setup/practice_area/mapping_pa_view';
-import MainWrapper from '@/app/ui/setup/main_wrapper';
-import { Main } from 'next/document';
+import { MainWrapper } from '@/app/ui/setup/basic_elements';
 
 export default async function Page({ params }:  { params: { id: string } }) {
   const { t, lang } = useTranslation('setup')
