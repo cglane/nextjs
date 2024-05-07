@@ -3,13 +3,16 @@
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react';
 import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
-
+import { updateCaseType } from '@/app/lib/actions';
 
 export default function MappingForm(props:any) {
     const [importNames, setImportNames] = useState<string[]>(props.importNames);
     const [likes, setLikes] = useState(0);
     const setTheState = (value: string[]) => {
         setImportNames(value)
+    }
+    const saveAndContinue = () => {
+        updateCaseType(props.caseTypeId, importNames)
     }
     // Temporary
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
@@ -40,7 +43,7 @@ export default function MappingForm(props:any) {
                     ))}
 
                 </div>
-
+                <button onClick={saveAndContinue}>Save and Continue</button>
         </div>
 
     )
