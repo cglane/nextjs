@@ -40,12 +40,3 @@ export function RemoveMapping({ callback, caseTypeId, importNames, importName }:
 
     );
   }
-// TODO change to i18n
-  export function ContinueButton(props:any){
-    return (
-        <button onClick={props.handleClickListener} className="mt-4 rounded-md cs-bg-dark-blue px-4 py-2 text-sm text-white "
-        >
-                    Save and Continue
-              </button> 
-    )
-  }

@@ -2,7 +2,7 @@
 
 import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react';
-import { RemoveMapping, AddMapping, ContinueButton } from '@/app/ui/setup/buttons';
+import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
 import { updateCaseType } from '@/app/lib/actions';
 import { AiSpan } from '../widgets';
 import BottomNavigation from './bottom_navigation';

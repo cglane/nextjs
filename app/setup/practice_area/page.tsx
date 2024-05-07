@@ -6,6 +6,7 @@ import {
   WrenchIcon
 } from '@heroicons/react/24/outline';
 export default  function Page() {     
+  // TODO: Add props for bottom nav forward and backwards
   const { t, lang } = useTranslation('progress')
     return (
     <main className='md:m-5 rounded-md border border-gray-200 h-screen'>
