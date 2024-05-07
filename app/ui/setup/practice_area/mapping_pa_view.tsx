@@ -4,8 +4,8 @@ import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react';
 import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
 import { updateCaseType } from '@/app/lib/actions';
-import { AiSpan } from '../widgets';
-import BottomNavigation from './bottom_navigation';
+import { AiSpan } from '../../widgets';
+import BottomNavigation from '../bottom_navigation';
 // TODO change props to interface
 export default function MappingForm(props:any) {
     const [importNames, setImportNames] = useState<string[]>(props.importNames);
