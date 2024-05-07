@@ -1,9 +1,12 @@
+
+
 export  function MainHeader({ children }: { children: React.ReactNode }) {
 
   return (
     <h1 className='text-lg text-sky-950 font-bold text-base'>{children}</h1>
   )
 }
+
 
 export  function MainWrapper({ children }: { children: React.ReactNode }) {
 
