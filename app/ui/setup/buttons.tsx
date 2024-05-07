@@ -35,11 +35,17 @@ export function RemoveMapping({ callback, caseTypeId, importNames, importName }:
     return (
         
         <div onClick={(e:any) => reduceAndReuse()}>
-            <button className="rounded-md border p-2 hover:bg-gray-100">
-            <span className="sr-only">Remove</span>
-            <TrashIcon className="w-5" />
-            </button>
+            <span className="text-blue-600 text-xs font-bold mx-4">Add</span>
         </div>
 
     );
+  }
+// TODO change to i18n
+  export function ContinueButton(props:any){
+    return (
+        <button onClick={props.handleClickListener} className="mt-4 rounded-md cs-bg-dark-blue px-4 py-2 text-sm text-white "
+        >
+                    Save and Continue
+              </button> 
+    )
   }
