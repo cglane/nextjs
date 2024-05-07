@@ -1,3 +1,4 @@
 {
-  "circleci.persistedProjectSelection": []
+  "circleci.persistedProjectSelection": [],
+  "html.format.wrapAttributes": "force-aligned"
 }
