@@ -6,8 +6,12 @@ import { RemoveMapping, AddMapping } from '@/app/ui/setup/buttons';
 import { updateCaseType } from '@/app/lib/actions';
 import { AiSpan } from '../../widgets';
 import BottomNavigation from '../bottom_navigation';
+import { useRouter } from 'next/navigation'
+
 // TODO change props to interface
 export default function MappingForm(props:any) {
+    const router = useRouter()
+
     const [importNames, setImportNames] = useState<string[]>(props.importNames);
     const setTheState = (value: string[]) => {
         setImportNames(value)
@@ -19,7 +23,8 @@ export default function MappingForm(props:any) {
     // Temporary
     const otherImportNames = ["Bankruptcy", "Worker Compensation"]
     const goBackClickListener = () => {
-        alert('Go Back')
+        router.push('/setup/practice_area/import')
+
     }
     return (
         <div> 

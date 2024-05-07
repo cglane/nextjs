@@ -3,6 +3,7 @@
 import { updateProgress } from "@/app/lib/actions";
 import { useStageStore } from "@/stores/stage";
 import { useRouter } from 'next/navigation'
+import Link from "next/link";
 export default  function Page() {      
   const router = useRouter()
 
@@ -23,6 +24,11 @@ export default  function Page() {
 >
             Click to Move on to the Next Module
         </button>  
+        {/* //Temporary */}
+        <Link  href="/setup/practice_area/126eed9c-c90c-4ef6-a4a8-fcf7408d3c66/edit/mappings" className="mt-4 rounded-md bg-green-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+>
+            Click to Map PA on Case Type
+        </Link>  
     </main>
   );
 }
