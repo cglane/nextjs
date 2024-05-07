@@ -12,10 +12,8 @@ export function RemoveMapping({ callback, caseTypeId, importNames, importName }:
     }
     return (
         <div onClick={(e:any) => reduceAndReuse()}>
-            <button className="rounded-md border p-2 hover:bg-gray-100">
-            <span className="sr-only">Remove</span>
-            <TrashIcon className="w-5" />
-            </button>
+                {/* TODO: Change to i18n */}
+            <span className="text-red-600 text-xs font-bold mx-4">Remove</span>            
         </div>
 
     );
