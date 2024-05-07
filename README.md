@@ -50,6 +50,7 @@ Why? Why not.
 - All components should be tested on 3 screen widths
 - Always use 'md' when thinking about desktop screens.
 - Data fetching and internationalization should be handled in server rendered files, and passed down to client files.
+- All static language should be capture by a variable with the locales file.
 
 ## Gotchas
 
