@@ -34,7 +34,7 @@ export default function MappingForm(props:any) {
                 <MainDescription>{props.description}</MainDescription>
             <br></br>
             <div className='grid rounded-md border border-gray-200'>
-                    <div className='bg-slate-200  border border-gray-200 text-xs p-2 h-8'><span>{props.mappedNameHeader}</span></div>
+                    <div className='bg-slate-200  border border-gray-200 text-xs p-2 md:h-8'><span>{props.mappedNameHeader}</span></div>
                     {importNames?.map((importName) => (
                         <div className="flex bg-slate-50 border border-gray-200 items-center" key={importName}>
                             <div className='flex w-9/12 font-bold text-xs mx-4'>
@@ -55,7 +55,7 @@ export default function MappingForm(props:any) {
                 </div>
                 <br></br>
                 <div className='grid rounded-md border border-gray-200'>
-                <div className='bg-slate-200  border border-gray-200 text-xs p-2 h-8'>
+                <div className='bg-slate-200  border border-gray-200 text-xs p-2 md:h-8'>
                     <span>{props.unmappedNameHeader}
                     </span>
                 </div>
