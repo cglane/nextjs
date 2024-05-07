@@ -1,17 +1,10 @@
 import { sql } from '@vercel/postgres';
 import {
-  CustomerField,
-  CustomersTableType,
-  InvoiceForm,
-  InvoicesTable,
-  LatestInvoiceRaw,
-  User,
-  Revenue,
+
   Progress,
   CaseType,
   CaseStatus,
 } from './definitions';
-import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
 import { getSession, setSession } from '@/auth';
 
