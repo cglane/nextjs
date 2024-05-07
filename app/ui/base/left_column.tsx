@@ -1,19 +1,19 @@
-"use client"
+'use client';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
-import useTranslation from 'next-translate/useTranslation'
-import HelpBubble from '@/app/ui/help_bubble'
+import useTranslation from 'next-translate/useTranslation';
+import HelpBubble from '@/app/ui/help_bubble';
 
-export default function LeftColumn(props:any) {
-  const { t, lang } = useTranslation('progress')
+export default function LeftColumn(props: any) {
+  const { t, lang } = useTranslation('progress');
 
-    return (
+  return (
     <div>
-      <div className='md:flex-none text-white w-full'>
-        <h2 className="font-bold text-xl p-1">{t('h_welcome_title')}</h2>                
-        <p className='text-xs leading-4 p-1'>{t('p_welcome_body')}</p>
+      <div className="w-full text-white md:flex-none">
+        <h2 className="p-1 text-xl font-bold">{t('h_welcome_title')}</h2>
+        <p className="p-1 text-xs leading-4">{t('p_welcome_body')}</p>
       </div>
       <br></br>
-      <HelpBubble/>
+      <HelpBubble />
     </div>
-    )
+  );
 }

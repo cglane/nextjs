@@ -4,14 +4,14 @@ import Page from './page';
 import LeftColumn from './ui/base/left_column';
 import RightColumn from './ui/base/right_column';
 import HeadNav from './ui/base/headnav';
-import { getSession } from "@/auth";
+import { getSession } from '@/auth';
 
 const dir = process.cwd();
-console.log(dir, 'directory')
+console.log(dir, 'directory');
 jest.mock('./ui/base/left_column');
 jest.mock('./ui/base/right_column');
 jest.mock('./ui/base/headnav');
-jest.mock("./auth", () => ({
+jest.mock('./auth', () => ({
   getSession: jest.fn(),
 }));
 
@@ -43,4 +43,3 @@ describe('Page component', () => {
     expect(RightColumn).toHaveBeenCalled();
   });
 });
-

@@ -1,4 +1,3 @@
-
 // import '@testing-library/jest-dom'
 // import { render, screen } from '@testing-library/react'
 // import HeadNav from '../../../app/ui/base/headnav'
@@ -29,7 +28,7 @@
 
 //   it('renders correctly', () => {
 //     render(<HeadNav session={{ user: { firm: { name: 'Case Law Firm' } } }} />);
-    
+
 //     // Check if the logo image is displayed
 //     expect(screen.getByRole('img')).toBeInTheDocument();
 

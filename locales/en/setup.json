@@ -1,5 +1,5 @@
 {
-    "p_description_integration_mapping": "CaseAi has recommended the following {{integration}} project types to map to this practice area. You can add more project types or remove project types from the list.",
-    "h2_mapping_instructions": "These {{integration}} project types will be synced with the new Personal injury practice area in Case Status:",
-    "h2_mapping_instructions_2": "These {{integration}} project types will not be synced with the practice area in Case Status:"
+  "p_description_integration_mapping": "CaseAi has recommended the following {{integration}} project types to map to this practice area. You can add more project types or remove project types from the list.",
+  "h2_mapping_instructions": "These {{integration}} project types will be synced with the new Personal injury practice area in Case Status:",
+  "h2_mapping_instructions_2": "These {{integration}} project types will not be synced with the practice area in Case Status:"
 }

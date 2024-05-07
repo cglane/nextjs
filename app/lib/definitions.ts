@@ -19,7 +19,7 @@ export type CaseStatus = {
   id: string;
   name: string;
   firm_id: string;
-  case_type_id: string
+  case_type_id: string;
   description: string;
   import_names: string;
 };

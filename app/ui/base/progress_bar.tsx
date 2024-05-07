@@ -1,5 +1,7 @@
 export default function Progress() {
-    return (
-        <h3 className="text-white rounded-md px-3 py-2 text-base font-medium">[Placeholder..]</h3>
-    )
+  return (
+    <h3 className="rounded-md px-3 py-2 text-base font-medium text-white">
+      [Placeholder..]
+    </h3>
+  );
 }

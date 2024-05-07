@@ -1,5 +1,5 @@
 import '@/app/ui/global.css';
-import '@/app/ui/styles/main.scss'
+import '@/app/ui/styles/main.scss';
 
 import { inter } from '@/app/ui/fonts';
 
@@ -11,9 +11,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* This is how we load fonts to our project. Antialiased is a tailwind class that smooths out the fonts.*/}
-          <body className={`${inter.className}  antialiased bg-slate-50`}>
-                {children}
-            </body>
+      <body className={`${inter.className}  bg-slate-50 antialiased`}>
+        {children}
+      </body>
     </html>
   );
-} 
+}

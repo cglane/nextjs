@@ -1,22 +1,22 @@
 @import './variables.scss';
 
-.bg-blue-light{
-    background-color: $blue-light
-  }
-.bg-blue-dark{
-  background-color: $blue-dark
+.bg-blue-light {
+  background-color: $blue-light;
 }
-.color-blue-light{
-  color: $blue-light
+.bg-blue-dark {
+  background-color: $blue-dark;
 }
-.color-blue-dark{
-  color: $blue-dark
+.color-blue-light {
+  color: $blue-light;
 }
-.color-sky-dark{
+.color-blue-dark {
+  color: $blue-dark;
+}
+.color-sky-dark {
   color: rgb(8 47 73);
 }
 
 // Change paradigm to cs for CaseStatus
-.cs-bg-dark-blue{
-    background-color: rgb(8 47 73);
+.cs-bg-dark-blue {
+  background-color: rgb(8 47 73);
 }

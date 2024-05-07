@@ -1,33 +1,34 @@
-"use client"
+'use client';
 
-  export default function StatusCheckBar(props:any) {
-    return (
-      <div className="flex items-center">
-        {
-          props.stages.map((stage: number)=> {
-            
-            if(stage < props.currentIndex){
-              return (
-                <div key={stage} className="w-2 h-2 bg-green-500 rounded-full flex justify-center items-center text-white font-bold mx-3">
-                ✓
-              </div>
-              )
-   
-            }else if(stage == props.currentIndex){
-              return (
-                <div key={stage} className="w-2 h-2 bg-blue-400 rounded-full flex justify-center items-center mx-3 border-2 border-blue-300">
-                </div>
-              )
-
-            }else {
-              return (
-                <div key={stage}className="w-2 h-2 bg-gray-300 rounded-full mx-3"></div>
-
-              )
-            }
-          })
+export default function StatusCheckBar(props: any) {
+  return (
+    <div className="flex items-center">
+      {props.stages.map((stage: number) => {
+        if (stage < props.currentIndex) {
+          return (
+            <div
+              key={stage}
+              className="mx-3 flex h-2 w-2 items-center justify-center rounded-full bg-green-500 font-bold text-white"
+            >
+              ✓
+            </div>
+          );
+        } else if (stage == props.currentIndex) {
+          return (
+            <div
+              key={stage}
+              className="mx-3 flex h-2 w-2 items-center justify-center rounded-full border-2 border-blue-300 bg-blue-400"
+            ></div>
+          );
+        } else {
+          return (
+            <div
+              key={stage}
+              className="mx-3 h-2 w-2 rounded-full bg-gray-300"
+            ></div>
+          );
         }
-      </div>
-    );
-  };
-  
+      })}
+    </div>
+  );
+}

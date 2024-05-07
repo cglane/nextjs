@@ -1,19 +1,9 @@
 {
-    "locales": [
-        "en",
-        "ca",
-        "es"
-    ],
-    "defaultLocale": "en",
-    "pages": {
-        "*": [
-            "common"
-        ],
-        "/": [
-            "main"
-        ],
-        "rgx:^/setup": [
-            "setup"
-        ]
-    }
+  "locales": ["en", "ca", "es"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common"],
+    "/": ["main"],
+    "rgx:^/setup": ["setup"]
+  }
 }
